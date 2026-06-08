@@ -1,0 +1,56 @@
+{
+  "title_uk": "Галерея",
+  "title_en": "Gallery",
+  "subtitle_uk": "Зал, обладнання та атмосфера тренувань",
+  "subtitle_en": "The gym, equipment, and training atmosphere",
+  "items": [
+    {
+      "image": "img/gallery/01.webp",
+      "alt_uk": "Тренажерний зал — загальний вигляд",
+      "alt_en": "Gym floor — general view",
+      "layout": "tall"
+    },
+    {
+      "image": "img/gallery/02.webp",
+      "alt_uk": "Зона вільних ваг",
+      "alt_en": "Free weights area",
+      "layout": "normal"
+    },
+    {
+      "image": "img/gallery/03.webp",
+      "alt_uk": "Кардіо-тренажери",
+      "alt_en": "Cardio machines",
+      "layout": "normal"
+    },
+    {
+      "image": "img/gallery/04.webp",
+      "alt_uk": "Групове заняття",
+      "alt_en": "Group class",
+      "layout": "normal"
+    },
+    {
+      "image": "img/gallery/05.webp",
+      "alt_uk": "Персональне тренування",
+      "alt_en": "Personal training session",
+      "layout": "tall"
+    },
+    {
+      "image": "img/gallery/06.webp",
+      "alt_uk": "Функціональна зона",
+      "alt_en": "Functional training zone",
+      "layout": "normal"
+    },
+    {
+      "image": "img/gallery/07.webp",
+      "alt_uk": "Зона боксу",
+      "alt_en": "Boxing area",
+      "layout": "wide"
+    },
+    {
+      "image": "img/gallery/08.webp",
+      "alt_uk": "Роздягальні та душові",
+      "alt_en": "Lockers and showers",
+      "layout": "normal"
+    }
+  ]
+}

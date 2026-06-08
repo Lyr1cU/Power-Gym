@@ -1,0 +1,39 @@
+{
+  "title_uk": "Контакти",
+  "title_en": "Contact",
+  "addressLabel_uk": "Адреса",
+  "addressLabel_en": "Address",
+  "address_uk": "пр-т Миру, 1б, Дніпро",
+  "address_en": "1b Mira Ave, Dnipro",
+  "hoursLabel_uk": "Години роботи",
+  "hoursLabel_en": "Opening hours",
+  "hours_uk": "Пн–Пт 6:00–23:00, Сб–Нд 8:00–22:00",
+  "hours_en": "Mon–Fri 6:00–23:00, Sat–Sun 8:00–22:00",
+  "phoneLabel_uk": "Телефон",
+  "phoneLabel_en": "Phone",
+  "phoneDisplay_uk": "+380 (56) 789-01-23",
+  "phoneDisplay_en": "+380 (56) 789-01-23",
+  "phone": "+380567890123",
+  "mapLabel_uk": "Карта розташування",
+  "mapLabel_en": "Location map",
+  "mapLat": 48.5248434,
+  "mapLng": 35.0227965,
+  "mapZoom": 17,
+  "socials": [
+    {
+      "id": "instagram",
+      "url": "https://instagram.com/",
+      "label": "Instagram"
+    },
+    {
+      "id": "telegram",
+      "url": "https://t.me/",
+      "label": "Telegram"
+    },
+    {
+      "id": "facebook",
+      "url": "https://facebook.com/",
+      "label": "Facebook"
+    }
+  ]
+}

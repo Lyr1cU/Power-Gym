@@ -1,0 +1,135 @@
+{
+  "title_uk": "Абонементи та тренери",
+  "title_en": "Memberships & coaches",
+  "subtitle_uk": "Обери формат тренувань або познайомся з нашою командою",
+  "subtitle_en": "Choose your training plan or meet our team",
+  "categories": [
+    {
+      "id": "memberships",
+      "label_uk": "Абонементи",
+      "label_en": "Memberships"
+    },
+    {
+      "id": "trainers",
+      "label_uk": "Тренери",
+      "label_en": "Coaches"
+    },
+    {
+      "id": "directions",
+      "label_uk": "Напрямки",
+      "label_en": "Programs"
+    }
+  ],
+  "items": [
+    {
+      "category": "memberships",
+      "name_uk": "Разове відвідування",
+      "name_en": "Single visit",
+      "desc_uk": "Один день повного доступу до залу та групових занять",
+      "desc_en": "One full day of gym and group class access",
+      "price_uk": "150 грн",
+      "price_en": "150 UAH",
+      "image": "img/memberships/single-visit.webp"
+    },
+    {
+      "category": "memberships",
+      "name_uk": "Місяць безліміт",
+      "name_en": "Unlimited month",
+      "desc_uk": "Необмежений доступ до залу протягом 30 днів",
+      "desc_en": "Unlimited gym access for 30 days",
+      "price_uk": "1 200 грн",
+      "price_en": "1,200 UAH",
+      "image": "img/memberships/month-unlimited.webp"
+    },
+    {
+      "category": "memberships",
+      "name_uk": "3 місяці",
+      "name_en": "3 months",
+      "desc_uk": "Вигідний абонемент на 90 днів з повним доступом",
+      "desc_en": "Best-value 90-day full-access membership",
+      "price_uk": "3 000 грн",
+      "price_en": "3,000 UAH",
+      "image": "img/memberships/three-months.webp"
+    },
+    {
+      "category": "memberships",
+      "name_uk": "Персональні (10 занять)",
+      "name_en": "Personal (10 sessions)",
+      "desc_uk": "10 персональних тренувань з тренером + доступ до залу",
+      "desc_en": "10 personal sessions with a coach plus gym access",
+      "price_uk": "3 500 грн",
+      "price_en": "3,500 UAH",
+      "image": "img/memberships/personal-10.webp"
+    },
+    {
+      "category": "trainers",
+      "name_uk": "Олексій К.",
+      "name_en": "Oleksii K.",
+      "desc_uk": "Силові тренування, набір м'язової маси, powerlifting",
+      "desc_en": "Strength training, muscle building, powerlifting",
+      "price_uk": "",
+      "price_en": "",
+      "image": "img/trainers/oleksii-k.webp"
+    },
+    {
+      "category": "trainers",
+      "name_uk": "Марина В.",
+      "name_en": "Maryna V.",
+      "desc_uk": "Функціональний тренінг, схуднення, стретчинг",
+      "desc_en": "Functional training, weight loss, stretching",
+      "price_uk": "",
+      "price_en": "",
+      "image": "img/trainers/maryna-v.webp"
+    },
+    {
+      "category": "trainers",
+      "name_uk": "Дмитро С.",
+      "name_en": "Dmytro S.",
+      "desc_uk": "Бокс, ММА, підготовка до змагань",
+      "desc_en": "Boxing, MMA, competition prep",
+      "price_uk": "",
+      "price_en": "",
+      "image": "img/trainers/dmytro-s.webp"
+    },
+    {
+      "category": "directions",
+      "name_uk": "Тренажерний зал",
+      "name_en": "Gym floor",
+      "desc_uk": "Силові та кардіо-тренажери, вільні ваги, функціональна зона",
+      "desc_en": "Strength and cardio machines, free weights, functional area",
+      "price_uk": "",
+      "price_en": "",
+      "image": "img/directions/gym-floor.webp"
+    },
+    {
+      "category": "directions",
+      "name_uk": "Групові заняття",
+      "name_en": "Group classes",
+      "desc_uk": "HIIT, стретчинг, аеробіка — заняття для будь-якого рівня",
+      "desc_en": "HIIT, stretching, aerobics — classes for every level",
+      "price_uk": "",
+      "price_en": "",
+      "image": "img/directions/group-classes.webp"
+    },
+    {
+      "category": "directions",
+      "name_uk": "Кросфіт",
+      "name_en": "CrossFit",
+      "desc_uk": "Високоінтенсивні WOD-и та робота з власною вагою",
+      "desc_en": "High-intensity WODs and bodyweight training",
+      "price_uk": "",
+      "price_en": "",
+      "image": "img/directions/crossfit.webp"
+    },
+    {
+      "category": "directions",
+      "name_uk": "Бокс",
+      "name_en": "Boxing",
+      "desc_uk": "Техніка ударів, робота на мішках та sparring",
+      "desc_en": "Punch technique, bag work, and sparring",
+      "price_uk": "",
+      "price_en": "",
+      "image": "img/directions/boxing.webp"
+    }
+  ]
+}

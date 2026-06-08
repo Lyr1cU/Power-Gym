@@ -1,0 +1,29 @@
+{
+  "title_uk": "Відгуки",
+  "title_en": "Reviews",
+  "subtitle_uk": "Що кажуть наші клієнти",
+  "subtitle_en": "What our members say",
+  "items": [
+    {
+      "author_uk": "Ігор М.",
+      "author_en": "Ihor M.",
+      "text_uk": "Найкращий зал у районі! Сучасне обладнання, чисто і просторо. Тренери завжди підкажуть з технікою. За місяць відчутний прогрес.",
+      "text_en": "The best gym in the area! Modern equipment, clean and spacious. Coaches always help with technique. Noticeable progress in a month.",
+      "stars": 5
+    },
+    {
+      "author_uk": "Катерина Л.",
+      "author_en": "Kateryna L.",
+      "text_uk": "Ходжу на групові та персональні заняття. Марина — супер тренер, мотивує і не дає розслабитися. Графік зручний, можна прийти після роботи.",
+      "text_en": "I attend group and personal sessions. Maryna is a great coach — motivating and keeps you on track. Convenient hours, easy to come after work.",
+      "stars": 5
+    },
+    {
+      "author_uk": "Андрій П.",
+      "author_en": "Andrii P.",
+      "text_uk": "Пробне заняття переконало одразу. Душі, роздягальні, все на місці. Жовто-чорний стиль залу — свій характер. Рекомендую!",
+      "text_en": "The free trial convinced me right away. Showers, lockers — everything you need. The yellow-and-black style gives the gym character. Highly recommend!",
+      "stars": 5
+    }
+  ]
+}
