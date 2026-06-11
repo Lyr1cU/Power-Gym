@@ -10,9 +10,9 @@ backend:
   base_url: https://netlify-cms-oauth-rust.vercel.app
   auth_endpoint: auth
 
-site_url: https://lyr1c1.github.io/Power-Gym
-display_url: https://lyr1c1.github.io/Power-Gym
-# logo_url: https://lyr1c1.github.io/Power-Gym/img/assets/logo.webp
+site_url: https://lyr1cu.github.io/Power-Gym
+display_url: https://lyr1cu.github.io/Power-Gym
+# logo_url: https://lyr1cu.github.io/Power-Gym/img/assets/logo.webp
 
 media_folder: img/uploads
 public_folder: img/uploads

@@ -1,86 +1,94 @@
-# Power Gym — тренажерний зал
+# Power Gym
 
-Демо-сайт тренажерного залу Power Gym (статична вёрстка, UA/EN).
+**Демо-сайт тренажерного зала** — одностраничный лендинг с двуязычным интерфейсом (UA / EN), адаптивной вёрсткой и панелью управления контентом без бэкенда.
 
-## Локальный просмотр
+**Live:** [lyr1cu.github.io/Power-Gym](https://lyr1cu.github.io/Power-Gym/)
 
-Сайт нельзя открывать как `file://` — ES-модули в `js/main.js` требуют HTTP-сервер.
+---
+
+## О проекте
+
+Power Gym — учебно-портфолио проект: полноценный сайт для реального зала в Днепре (пр-т Миру, 1б). Задача — показать, как из универсального шаблона собрать убедительный продукт под конкретный бизнес: другая палитра, контент, структура секций и CMS для владельца.
+
+Сайт не привязан к серверу приложений: контент хранится в JSON, деплой — статика на GitHub Pages.
+
+> Фото и часть текстов — демонстрационные (сток / placeholder). В продакшене заменяются на материалы заказчика.
+
+---
+
+## Для посетителей сайта
+
+| Раздел | Что внутри |
+|--------|------------|
+| **Hero** | Главный экран, призыв записаться на пробное занятие |
+| **Про нас** | Преимущества зала — 4 карточки |
+| **Абонементы** | Тарифы, тренеры и направления — вкладки |
+| **Галерея** | Фото зала с lightbox |
+| **Отзывы** | Слайдер отзывов клиентов |
+| **Контакты** | Адрес, график, карта, форма записи, соцсети |
+
+Переключение языка **UA / EN** — в шапке, без перезагрузки страницы.
+
+---
+
+## Для рекрутеров и заказчиков
+
+### Что реализовано
+
+- Адаптивная вёрстка: desktop, tablet, mobile (бургер-меню)
+- Тёмная UI-тема под бренд зала (графит + акцент `#FFD400`)
+- Контент отделён от разметки — JSON + i18n
+- **Decap CMS** — редактирование абонементов, галереи, отзывов и контактов через браузер
+- CI/CD: push в `main` → GitHub Actions → GitHub Pages
+- OAuth через Vercel-прокси для входа в админку на продакшене
+- Форма с клиентской валидацией, карта Google Maps по адресу
+
+### Стек
+
+| Слой | Технологии |
+|------|------------|
+| Разметка / стили | HTML5, CSS3 (custom properties, Grid, Flexbox) |
+| Логика | Vanilla JavaScript (ES modules) |
+| Контент | JSON, Decap CMS |
+| Деплой | GitHub Pages, GitHub Actions |
+| Медиа | WebP |
+
+Без React, Vue и сборщиков — осознанный выбор для лёгкого и быстрого статического сайта.
+
+### Архитектура (кратко)
+
+```
+index.html          — секции + data-i18n для UI-строк
+content/*.json      — абонементы, галерея, отзывы, контакты
+js/i18n/            — переводы UA / EN
+js/render/          — рендер JSON в DOM
+admin/              — Decap CMS
+.github/workflows/  — автодеплой
+```
+
+---
+
+## Ссылки
+
+| | URL |
+|---|-----|
+| Сайт | https://lyr1cu.github.io/Power-Gym/ |
+| Админка (CMS) | https://lyr1cu.github.io/Power-Gym/admin/ |
+
+---
+
+## Локальный запуск
 
 ```bash
 python -m http.server 8080
 ```
 
-Откройте http://localhost:8080
+→ http://localhost:8080
 
-## GitHub Pages
+Для админки локально: `npx decap-server` + тот же HTTP-сервер → `/admin/`
 
-1. Создайте репозиторий на GitHub (например `Power-Gym` в организации `Lyr1cU`).
-2. Привяжите remote и запушьте `main`:
+---
 
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial Power Gym site"
-   git branch -M main
-   git remote add origin https://github.com/Lyr1cU/Power-Gym.git
-   git push -u origin main
-   ```
+## Автор
 
-3. В репозитории: **Settings → Pages → Build and deployment → Source** выберите **GitHub Actions** (если деплой упал с `Get Pages site failed` — это обязательный шаг).
-4. После push workflow опубликует сайт по адресу:
-
-   `https://lyr1c1.github.io/Power-Gym/`
-
-## Админка (Decap CMS)
-
-Адрес: `https://lyr1c1.github.io/Power-Gym/admin/` (после деплоя).
-
-Редактируются `content/*.json`: абонементи, галерея, відгуки, контакти. Новые фото загружаются в `img/uploads/`.
-
-### Локально (без GitHub-входа)
-
-Два терминала:
-
-```bash
-# 1 — прокси для записи в репозиторий
-npx decap-server
-
-# 2 — сайт
-python -m http.server 8080
-```
-
-Откройте http://localhost:8080/admin/ — вход не нужен (`local_backend: true` в `admin/config.yml`).
-
-### Продакшн (вход через GitHub)
-
-Можно использовать **тот же OAuth-прокси на Vercel**, что и для Zerno (`netlify-cms-oauth-rust.vercel.app`), либо задеплоить свой fork [ublabs/netlify-cms-oauth](https://github.com/ublabs/netlify-cms-oauth).
-
-1. **OAuth-прокси на Vercel** (если ещё не настроен для Zerno):
-   - [vercel.com/new](https://vercel.com/new) → Import → `ublabs/netlify-cms-oauth`
-   - Deploy → URL прокси, например `https://netlify-cms-oauth-rust.vercel.app`
-
-2. **GitHub OAuth App** (Settings → Developer settings → OAuth Apps):
-   - Application name: `Power Gym CMS`
-   - Homepage URL: `https://lyr1c1.github.io/Power-Gym/`
-   - Authorization callback URL: `https://netlify-cms-oauth-rust.vercel.app/callback` (URL прокси + `/callback`)
-
-   > Если прокси уже используется для Zerno с тем же callback URL — можно **переиспользовать тот же OAuth App** (Client ID / Secret в Vercel). Достаточно write-доступа к репозиторию `Lyr1cU/Power-Gym`.
-
-3. **Переменные в Vercel** (Project → Settings → Environment Variables):
-   - `OAUTH_GITHUB_CLIENT_ID`
-   - `OAUTH_GITHUB_CLIENT_SECRET`
-   - Redeploy после изменений
-
-4. В `admin/config.yml` поле `base_url` должно совпадать с URL прокси (без `/callback`) — уже настроено.
-
-5. У GitHub-аккаунта для входа в админку должен быть **write** доступ к `Lyr1cU/Power-Gym`.
-
-После **Publish** в админке изменения попадают в `main` → GitHub Actions обновляет сайт (1–2 мин).
-
-## Структура
-
-- `content/*.json` — абонементи, галерея, відгуки, контакти
-- `js/i18n/` — переклади UI (UA/EN)
-- `css/` — стилі (акцент `#FFD400`, база `#1a1a1a`)
-- `img/` — фото залу (webp)
-- `admin/` — Decap CMS
+[GitHub — Lyr1cU](https://github.com/Lyr1cU)
