@@ -1,83 +1,83 @@
 # Power Gym
 
-**Демо-сайт тренажерного зала** — одностраничный лендинг с двуязычным интерфейсом (UA / EN), адаптивной вёрсткой и панелью управления контентом без бэкенда.
+**Demo website for a fitness gym** — a single-page landing with a bilingual interface (UA / EN), responsive layout, and a backend-free content management panel.
 
 **Live:** [lyr1cu.github.io/Power-Gym](https://lyr1cu.github.io/Power-Gym/)
 
 ---
 
-## О проекте
+## About the project
 
-Power Gym — учебно-портфолио проект: полноценный сайт для реального зала в Днепре (пр-т Миру, 1б). Задача — показать, как из универсального шаблона собрать убедительный продукт под конкретный бизнес: другая палитра, контент, структура секций и CMS для владельца.
+Power Gym is a portfolio project: a full website for a real gym in Dnipro, Ukraine (1b Mira Ave). The goal was to turn a universal template into a convincing product for a specific business — new palette, content, section structure, and a CMS for the owner.
 
-Сайт не привязан к серверу приложений: контент хранится в JSON, деплой — статика на GitHub Pages.
+The site has no application server: content lives in JSON files, deployment is static hosting on GitHub Pages.
 
-> Фото и часть текстов — демонстрационные (сток / placeholder). В продакшене заменяются на материалы заказчика.
-
----
-
-## Для посетителей сайта
-
-| Раздел | Что внутри |
-|--------|------------|
-| **Hero** | Главный экран, призыв записаться на пробное занятие |
-| **Про нас** | Преимущества зала — 4 карточки |
-| **Абонементы** | Тарифы, тренеры и направления — вкладки |
-| **Галерея** | Фото зала с lightbox |
-| **Отзывы** | Слайдер отзывов клиентов |
-| **Контакты** | Адрес, график, карта, форма записи, соцсети |
-
-Переключение языка **UA / EN** — в шапке, без перезагрузки страницы.
+> Photos and some copy are demo placeholders (stock). In production they are replaced with the client’s own assets.
 
 ---
 
-## Для рекрутеров и заказчиков
+## For site visitors
 
-### Что реализовано
+| Section | Contents |
+|---------|----------|
+| **Hero** | Main screen with a free trial call-to-action |
+| **About** | Four feature cards highlighting the gym |
+| **Memberships** | Plans, coaches, and programs — tabbed layout |
+| **Gallery** | Gym photos with lightbox |
+| **Reviews** | Client testimonial slider |
+| **Contact** | Address, hours, map, booking form, social links |
 
-- Адаптивная вёрстка: desktop, tablet, mobile (бургер-меню)
-- Тёмная UI-тема под бренд зала (графит + акцент `#FFD400`)
-- Контент отделён от разметки — JSON + i18n
-- **Decap CMS** — редактирование абонементов, галереи, отзывов и контактов через браузер
-- CI/CD: push в `main` → GitHub Actions → GitHub Pages
-- OAuth через Vercel-прокси для входа в админку на продакшене
-- Форма с клиентской валидацией, карта Google Maps по адресу
+Language switch **UA / EN** is in the header, with no full page reload.
 
-### Стек
+---
 
-| Слой | Технологии |
-|------|------------|
-| Разметка / стили | HTML5, CSS3 (custom properties, Grid, Flexbox) |
-| Логика | Vanilla JavaScript (ES modules) |
-| Контент | JSON, Decap CMS |
-| Деплой | GitHub Pages, GitHub Actions |
-| Медиа | WebP |
+## For recruiters and clients
 
-Без React, Vue и сборщиков — осознанный выбор для лёгкого и быстрого статического сайта.
+### What’s included
 
-### Архитектура (кратко)
+- Responsive layout: desktop, tablet, mobile (burger menu)
+- Dark UI theme aligned with the gym brand (graphite + `#FFD400` accent)
+- Content separated from markup — JSON + i18n
+- **Decap CMS** — edit memberships, gallery, reviews, and contacts in the browser
+- CI/CD: push to `main` → GitHub Actions → GitHub Pages
+- OAuth via a Vercel proxy for production admin login
+- Form with client-side validation, Google Maps embed for the address
+
+### Stack
+
+| Layer | Technologies |
+|-------|----------------|
+| Markup / styles | HTML5, CSS3 (custom properties, Grid, Flexbox) |
+| Logic | Vanilla JavaScript (ES modules) |
+| Content | JSON, Decap CMS |
+| Deployment | GitHub Pages, GitHub Actions |
+| Media | WebP |
+
+No React, Vue, or bundlers — a deliberate choice for a lightweight, fast static site.
+
+### Architecture (overview)
 
 ```
-index.html          — секции + data-i18n для UI-строк
-content/*.json      — абонементы, галерея, отзывы, контакты
-js/i18n/            — переводы UA / EN
-js/render/          — рендер JSON в DOM
+index.html          — sections + data-i18n for UI strings
+content/*.json      — memberships, gallery, reviews, contacts
+js/i18n/            — UA / EN translations
+js/render/          — JSON-to-DOM rendering
 admin/              — Decap CMS
-.github/workflows/  — автодеплой
+.github/workflows/  — auto-deploy
 ```
 
 ---
 
-## Ссылки
+## Links
 
 | | URL |
 |---|-----|
-| Сайт | https://lyr1cu.github.io/Power-Gym/ |
-| Админка (CMS) | https://lyr1cu.github.io/Power-Gym/admin/ |
+| Website | https://lyr1cu.github.io/Power-Gym/ |
+| Admin (CMS) | https://lyr1cu.github.io/Power-Gym/admin/ |
 
 ---
 
-## Локальный запуск
+## Local development
 
 ```bash
 python -m http.server 8080
@@ -85,10 +85,10 @@ python -m http.server 8080
 
 → http://localhost:8080
 
-Для админки локально: `npx decap-server` + тот же HTTP-сервер → `/admin/`
+For the admin panel locally: `npx decap-server` plus the same HTTP server → `/admin/`
 
 ---
 
-## Автор
+## Author
 
 [GitHub — Lyr1cU](https://github.com/Lyr1cU)
