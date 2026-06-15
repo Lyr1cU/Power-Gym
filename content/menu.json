@@ -130,14 +130,6 @@
       "price_uk": "",
       "price_en": "",
       "image": "img/directions/boxing.webp"
-    },
-    {
-      "category": "trainers",
-      "name_uk": "Артем Т.",
-      "name_en": "Artem T.",
-      "desc_uk": "Тренування з квадробінгу, бої з повітряним мечем...",
-      "desc_en": "Quadrobing training, air sword fighting...",
-      "image": "img/uploads/oip.webp"
     }
   ]
 }
